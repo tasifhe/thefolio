@@ -109,17 +109,51 @@
         const targetPosition = targetSection.offsetTop - navbarHeight - 20;
         
         console.log(`Target position: ${targetPosition}`);
+        console.log(`Current scroll position: ${window.scrollY}`);
         
-        // Use multiple scroll methods for better compatibility
+        // Try multiple scroll methods for maximum compatibility
+        let scrollSuccess = false;
+        
+        // Method 1: scrollIntoView (most reliable)
         try {
-            window.scrollTo({
-                top: Math.max(0, targetPosition),
-                behavior: 'smooth'
+            targetSection.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
             });
+            scrollSuccess = true;
+            console.log('Used scrollIntoView method');
         } catch (error) {
-            console.warn('Smooth scroll not supported, using fallback');
-            window.scrollTo(0, Math.max(0, targetPosition));
+            console.warn('scrollIntoView failed:', error);
         }
+        
+        // Method 2: window.scrollTo with smooth behavior
+        if (!scrollSuccess) {
+            try {
+                window.scrollTo({
+                    top: Math.max(0, targetPosition),
+                    behavior: 'smooth'
+                });
+                scrollSuccess = true;
+                console.log('Used window.scrollTo smooth method');
+            } catch (error) {
+                console.warn('Smooth scrollTo failed:', error);
+            }
+        }
+        
+        // Method 3: instant scroll as fallback
+        if (!scrollSuccess) {
+            try {
+                window.scrollTo(0, Math.max(0, targetPosition));
+                console.log('Used instant scroll fallback');
+            } catch (error) {
+                console.error('All scroll methods failed:', error);
+            }
+        }
+        
+        // Check if scroll actually happened
+        setTimeout(() => {
+            console.log(`Scroll position after attempt: ${window.scrollY}`);
+        }, 100);
         
         // Update URL
         if (window.history && window.history.pushState) {
