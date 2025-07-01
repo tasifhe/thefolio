@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasif Hossain Emon - Game Developer & Designer</title>
+    <meta name="description" content="Professional Unity Game Developer & Designer with 5+ years experience. Specializing in procedural generation, level design, and immersive gaming experiences.">
+    <meta name="keywords" content="Game Developer, Unity Developer, Game Designer, Procedural Generation, Level Design, Bangladesh Game Developer">
+    <meta name="author" content="Tasif Hossain Emon">
+    <link rel="icon" type="image/x-icon" href="assets/img/THE2.ico">
+    <!-- External Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Modular CSS Architecture -->
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="assets/css/components/loading.css">
+    <link rel="stylesheet" href="assets/css/components/navigation.css">
+    <link rel="stylesheet" href="assets/css/components/ui-components.css">
+    
+    <!-- Section Styles -->
+    <link rel="stylesheet" href="assets/css/sections/hero.css">
+    <link rel="stylesheet" href="assets/css/sections/about.css">
+    <link rel="stylesheet" href="assets/css/sections/services.css">
+    <link rel="stylesheet" href="assets/css/sections/stats.css">
+    <link rel="stylesheet" href="assets/css/sections/projects.css">
+    <link rel="stylesheet" href="assets/css/sections/skills.css">
+    <link rel="stylesheet" href="assets/css/sections/contact.css">
+    <link rel="stylesheet" href="assets/css/sections/footer.css">
+    
+    <!-- Utility Styles -->
+    <link rel="stylesheet" href="assets/css/utilities/utilities.css">
+    <link rel="stylesheet" href="assets/css/utilities/responsive.css">
+    
+    <!-- Legacy Support (will be phased out) -->
+    <link rel="stylesheet" href="assets/css/legacy.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="assets/img/THE2.ico" alt="THE Logo">
+                <div class="loading-glow"></div>
+            </div>
+            <div class="pixel-loader"></div>
+            <p class="loading-text">Initializing Game World...</p>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="progress-text">Initializing systems...</div>
+        </div>
+        <div class="matrix-bg"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar game-header" id="navbar">
+        <div class="nav-frame left"></div>
+        <div class="nav-frame right"></div>
+        <div class="nav-container">
+            <div class="nav-logo game-logo">
+                <div class="logo-emblem">
+                    <div class="logo-glow"></div>
+                    <img src="assets/img/THE2.ico" alt="THE Logo">
+                </div>
+                <div class="logo-text-container">
+                    <span class="logo-text glitch-hover" data-text="THE">THE</span>
+                    <span class="logo-tagline">GAME DESIGNER</span>
+                </div>
+            </div>
+            <ul class="nav-menu game-navbar" id="nav-menu">
+                <li><a href="#home" class="nav-link active">
+                    <span class="nav-icon"><i class="bi bi-house"></i></span>
+                    <span class="nav-text">HOME</span>
+                    <span class="nav-hover-effect"></span>
+                </a></li>
+                <li><a href="#about" class="nav-link">
+                    <span class="nav-icon"><i class="bi bi-person"></i></span>
+                    <span class="nav-text">ABOUT</span>
+                    <span class="nav-hover-effect"></span>
+                </a></li>
+                <li><a href="#services" class="nav-link">
+                    <span class="nav-icon"><i class="bi bi-gear"></i></span>
+                    <span class="nav-text">SERVICES</span>
+                    <span class="nav-hover-effect"></span>
+                </a></li>
+                <li><a href="#projects" class="nav-link">
+                    <span class="nav-icon"><i class="bi bi-briefcase"></i></span>
+                    <span class="nav-text">PROJECTS</span>
+                    <span class="nav-hover-effect"></span>
+                </a></li>
+                <li><a href="#skills" class="nav-link">
+                    <span class="nav-icon"><i class="bi bi-lightning-charge"></i></span>
+                    <span class="nav-text">SKILLS</span>
+                    <span class="nav-hover-effect"></span>
+                </a></li>
+                <li><a href="#contact" class="nav-link">
+                    <span class="nav-icon"><i class="bi bi-envelope"></i></span>
+                    <span class="nav-text">CONTACT</span>
+                    <span class="nav-hover-effect"></span>
+                </a></li>
+            </ul>
+            <div class="nav-toggle game-mobile-toggle" id="nav-toggle">
+                <i class="bi bi-list mobile-nav-toggle"></i>
+                <div class="toggle-glow"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero route bg-image">
+        <!-- Animated particle overlay -->
+        <div class="particles-container"></div>
+        
+        <div class="hero-bg">
+            <img src="assets/img/CoverBG3.png" alt="Background" class="hero-img">
+            <div class="hero-overlay overlay-game-design"></div>
+        </div>
+        
+        <!-- UI Frame elements -->
+        <div class="ui-frame top-left"></div>
+        <div class="ui-frame top-right"></div>
+        <div class="ui-frame bottom-left"></div>
+        <div class="ui-frame bottom-right"></div>
+        
+        <div class="hero-content display-table">
+            <div class="table-cell">
+                <div class="container">
+                    <!-- Level indicator -->
+                    <div class="level-indicator">
+                        <span class="level-text">LEVEL</span>
+                        <span class="level-number">05</span>
+                        <div class="level-bar"><div class="level-progress"></div></div>
+                    </div>
+                    
+                    <div class="hero-text">
+                        <h1 class="hero-title game-title">
+                            <span class="glitch-effect typewriter" data-text="Hi! I'm Tasif Hossain Emon">Hi! I'm Tasif Hossain Emon</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            <span class="class-title">CLASS:</span>
+                            <span class="typed game-font" data-typed-items="Unity Game Developer,Game Designer,Procedural World Creator,Level Design Expert,Competitive Programmer"></span>
+                            <span class="cursor-indicator">_</span>
+                        </p>
+                        
+                        <!-- Game-styled CTA buttons -->
+                        <div class="hero-buttons cta-container">
+                            <a href="#projects" class="btn game-button btn-primary">
+                                <span class="button-text">VIEW PROJECTS</span>
+                                <span class="button-icon">→</span>
+                            </a>
+                            <a href="assets/CV/CV.pdf" class="btn game-button btn-secondary" target="_blank">
+                                <span class="button-text">DOWNLOAD CV</span>
+                                <span class="button-icon">📄</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <div class="image-container character-profile">
+                            <div class="profile-frame hexagon-border">
+                                <img src="assets/img/Potfolio_Pic_V2.jpg" alt="Tasif Hossain Emon">
+                                <div class="profile-scanner"></div>
+                                <div class="character-level">LVL 5</div>
+                            </div>
+                            <div class="floating-elements">
+                                <div class="floating-element" data-speed="0.5">🎮</div>
+                                <div class="floating-element" data-speed="0.3">⚡</div>
+                                <div class="floating-element" data-speed="0.7">🚀</div>
+                                <div class="floating-element" data-speed="0.4">🎯</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse-icon"></div>
+            <span>SCROLL DOWN</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about about-game section-bg">
+        <div class="container">
+            <!-- Game UI decorative elements -->
+            <div class="game-ui-corner top-left"></div>
+            <div class="game-ui-corner top-right"></div>
+            <div class="game-ui-corner bottom-left"></div>
+            <div class="game-ui-corner bottom-right"></div>
+            
+            <!-- Section title with game styling -->
+            <div class="section-header">
+                <div class="section-title-game">
+                    <div class="title-decoration left"></div>
+                    <h2 class="section-title" data-text="ABOUT ME">ABOUT ME</h2>
+                    <div class="title-decoration right"></div>
+                </div>
+                <p class="section-subtitle">Character Profile & Mission Background</p>
+            </div>
+
+            <div class="about-content about-grid-game">
+                <!-- Character Card - Left Column -->
+                <div class="character-card">
+                    <!-- Profile Picture with HUD frame -->
+                    <div class="profile-frame" data-aos="fade-right">
+                        <div class="hexagon-border"></div>
+                        <img src="assets/img/Potfolio_Pic_V2.jpg" alt="Tasif Hossain Emon" class="profile-image">
+                        <div class="profile-scanner"></div>
+                        <div class="character-level">LVL 5</div>
+                    </div>
+
+                    <!-- Character Stats Panel -->
+                    <div class="character-stats" data-aos="fade-right" data-aos-delay="100">
+                        <div class="stats-header">
+                            <i class="bi bi-shield-fill"></i>
+                            <span>CHARACTER DATA</span>
+                        </div>
+                        
+                        <ul class="stats-list">
+                            <li class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label">NAME</span>
+                                    <span class="stat-value">Tasif Hossain Emon</span>
+                                </div>
+                            </li>
+                            <li class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="bi bi-briefcase"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label">CLASS</span>
+                                    <span class="stat-value">Unity Game Developer</span>
+                                </div>
+                            </li>
+                            <li class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label">CONTACT</span>
+                                    <span class="stat-value">tasif.grandfleet@gmail.com</span>
+                                </div>
+                            </li>
+                            <li class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label">COMM LINK</span>
+                                    <span class="stat-value">+880 1978648494</span>
+                                </div>
+                            </li>
+                            <li class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label">BASE</span>
+                                    <span class="stat-value">Bangladesh</span>
+                                </div>
+                            </li>
+                            <li class="stat-item rank-item">
+                                <div class="stat-icon rank-icon">
+                                    <i class="bi bi-calendar-check"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label">STATUS</span>
+                                    <span class="stat-badge">ONLINE - READY FOR MISSIONS</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Game Content Panels - Right Column -->
+                <div class="game-content-panels">
+                    <!-- Bio Section -->
+                    <div class="game-panel" data-aos="fade-up">
+                        <div class="panel-header">
+                            <div class="panel-icon">
+                                <i class="bi bi-person-badge"></i>
+                            </div>
+                            <h3 class="panel-title">PLAYER BIO</h3>
+                            <div class="panel-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <h4><span class="text-glow">👋</span> Hello! I'm Tasif</h4>
+                            <p>A passionate <strong class="highlight">Unity Game Developer</strong> and <strong class="highlight">Game Designer</strong> with 5+ years of experience creating immersive gaming experiences. I specialize in bringing innovative concepts to life through clean code, procedural generation, and captivating design.</p>
+                        </div>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="game-panel achievements-panel" data-aos="fade-up" data-aos-delay="100">
+                        <div class="panel-header">
+                            <div class="panel-icon">
+                                <i class="bi bi-trophy-fill"></i>
+                            </div>
+                            <h3 class="panel-title">ACHIEVEMENTS</h3>
+                            <div class="panel-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <div class="achievements-grid stats-grid">
+                                <div class="achievement-card stat-item">
+                                    <div class="achievement-hexagon">
+                                        <i class="bi bi-check-circle"></i>
+                                        <div class="achievement-glow"></div>
+                                    </div>
+                                    <div class="achievement-stat stat-number" data-target="22">0</div>
+                                    <div class="achievement-name stat-label">PROJECTS</div>
+                                </div>
+                                
+                                <div class="achievement-card stat-item">
+                                    <div class="achievement-hexagon">
+                                        <i class="bi bi-people"></i>
+                                        <div class="achievement-glow"></div>
+                                    </div>
+                                    <div class="achievement-stat stat-number" data-target="16">0</div>
+                                    <div class="achievement-name stat-label">CLIENTS</div>
+                                </div>
+                                
+                                <div class="achievement-card stat-item">
+                                    <div class="achievement-hexagon">
+                                        <i class="bi bi-award"></i>
+                                        <div class="achievement-glow"></div>
+                                    </div>
+                                    <div class="achievement-stat stat-number" data-target="5">0</div>
+                                    <div class="achievement-name stat-label">AWARDS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="game-panel" data-aos="fade-up" data-aos-delay="200">
+                        <div class="panel-header">
+                            <div class="panel-icon">
+                                <i class="bi bi-lightning-charge-fill"></i>
+                            </div>
+                            <h3 class="panel-title">CLASS ABILITIES</h3>
+                            <div class="panel-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <ul class="abilities-list">
+                                <li class="ability-item">
+                                    <div class="ability-icon">
+                                        <i class="bi bi-cpu"></i>
+                                    </div>
+                                    <span>Unity Game Development with C# Mastery</span>
+                                </li>
+                                <li class="ability-item">
+                                    <div class="ability-icon">
+                                        <i class="bi bi-gear"></i>
+                                    </div>
+                                    <span>Procedural World Generation Systems</span>
+                                </li>
+                                <li class="ability-item">
+                                    <div class="ability-icon">
+                                        <i class="bi bi-map"></i>
+                                    </div>
+                                    <span>Advanced Level Design & World Building</span>
+                                </li>
+                                <li class="ability-item">
+                                    <div class="ability-icon">
+                                        <i class="bi bi-ui-checks"></i>
+                                    </div>
+                                    <span>Game UI/UX Design & Implementation</span>
+                                </li>
+                                <li class="ability-item">
+                                    <div class="ability-icon">
+                                        <i class="bi bi-speedometer2"></i>
+                                    </div>
+                                    <span>Performance Optimization & Cross-Platform Porting</span>
+                                </li>
+                                <li class="ability-item">
+                                    <div class="ability-icon">
+                                        <i class="bi bi-diagram-3"></i>
+                                    </div>
+                                    <span>Competitive Programming & Algorithm Design</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Final Text -->
+                    <div class="game-panel passion-panel" data-aos="fade-up" data-aos-delay="300">
+                        <div class="panel-content no-padding">
+                            <p class="passion-text">Beyond game development, I'm deeply invested in creating educational gaming experiences, exploring procedural content generation, and pushing the boundaries of what's possible in interactive entertainment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-mf pt-5 route">
+        <div class="container">
+            <!-- Game UI decorative elements -->
+            <div class="game-ui-corner top-left"></div>
+            <div class="game-ui-corner top-right"></div>
+            <div class="game-ui-corner bottom-left"></div>
+            <div class="game-ui-corner bottom-right"></div>
+            
+            <div class="section-header">
+                <div class="section-title-game">
+                    <div class="title-decoration left"></div>
+                    <h2 class="section-title">MISSION SERVICES</h2>
+                    <div class="title-decoration right"></div>
+                </div>
+                <p class="section-subtitle">Specialized skills and services I offer to bring your gaming visions to life</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-ico">
+                        <span class="ico-circle"><i class="bi bi-controller"></i></span>
+                    </div>
+                    <div class="service-content">
+                        <h2 class="s-title">Unity Game Development</h2>
+                        <p class="s-description">
+                            For the past 5 years, I've mastered Unity game development, specializing in core systems like Scriptable Objects for modular architecture, advanced animation systems, complex game mechanics, intuitive UI/UX design, and seamless third-party integrations for enhanced functionality.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="service-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-ico">
+                        <span class="ico-circle"><i class="bi bi-gear-fill"></i></span>
+                    </div>
+                    <div class="service-content">
+                        <h2 class="s-title">Procedural World Generation</h2>
+                        <p class="s-description">
+                            Specializing in PWG (Procedural World Generation) systems, I create infinite, dynamic worlds that provide unique experiences every time. My expertise includes terrain generation, dungeon creation, and adaptive content systems that scale beautifully across platforms.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="service-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-ico">
+                        <span class="ico-circle"><i class="bi bi-map-fill"></i></span>
+                    </div>
+                    <div class="service-content">
+                        <h2 class="s-title">Level Design & World Building</h2>
+                        <p class="s-description">
+                            Building on my 5 years in Unity development, I've become a proficient level designer. My skills in advanced techniques like procedural generation, performance optimization, and cross-platform porting allow me to craft high-performing games for multiple platforms.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="service-box" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-ico">
+                        <span class="ico-circle"><i class="bi bi-diagram-2-fill"></i></span>
+                    </div>
+                    <div class="service-content">
+                        <h2 class="s-title">Programming & Problem Solving</h2>
+                        <p class="s-description">
+                            As a well-rounded developer, I focus beyond coding to tackle complex algorithmic challenges. With 2+ years of competitive programming experience in C/C++, I constantly improve my data structures and algorithms knowledge for efficient, scalable solutions.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="service-box" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-ico">
+                        <span class="ico-circle"><i class="bi bi-palette-fill"></i></span>
+                    </div>
+                    <div class="service-content">
+                        <h2 class="s-title">Game Art & Visual Design</h2>
+                        <p class="s-description">
+                            With a lifelong passion for art and creating captivating visuals, I specialize in character design, environment art, and game asset creation. Proficient in digital tools like Photoshop, Illustrator, and Krita, I create compelling visual narratives for games and interactive media.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="service-box" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-ico">
+                        <span class="ico-circle"><i class="bi bi-globe"></i></span>
+                    </div>
+                    <div class="service-content">
+                        <h2 class="s-title">Full-Stack Game Solutions</h2>
+                        <p class="s-description">
+                            While my passion lies in game development, I also offer complementary web development services. With experience in modern web technologies, I can create supporting websites, dashboards, and web-based game experiences to complement your main projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Stats Counter Section -->
+    <section id="counter" class="counter-mf sect-pt4 route game-counter-section">
+        <div class="container">
+            <!-- Game UI decorative elements -->
+            <div class="game-ui-corner top-left"></div>
+            <div class="game-ui-corner top-right"></div>
+            <div class="game-ui-corner bottom-left"></div>
+            <div class="game-ui-corner bottom-right"></div>
+            
+            <!-- Enhanced title section -->
+            <div class="counter-title-section" data-aos="fade-up">
+                <div class="section-title-game">
+                    <div class="title-decoration left"></div>
+                    <h2>MISSION STATS</h2>
+                    <div class="title-decoration right"></div>
+                </div>
+                <p class="counter-subtitle">Real-time performance metrics and achievements</p>
+            </div>
+            
+            <!-- Enhanced counter grid -->
+            <div class="counter-glass-enhanced">
+                <div class="counter-grid">
+                    <div class="counter-box-game" data-aos="fade-up" data-aos-delay="100">
+                        <div class="counter-header">
+                            <div class="counter-icon-frame">
+                                <div class="counter-icon-glow"></div>
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+                            <div class="counter-badge">COMPLETED</div>
+                        </div>
+                        <div class="counter-content">
+                            <div class="counter-num-game">
+                                <span class="counter purecounter" data-target="22">0</span>
+                                <span class="counter-plus">+</span>
+                            </div>
+                            <div class="counter-label-game">
+                                <span class="counter-text">PROJECTS</span>
+                                <span class="counter-subtext">Successfully Delivered</span>
+                            </div>
+                        </div>
+                        <div class="counter-progress-bar">
+                            <div class="counter-progress-fill" data-progress="88"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="counter-box-game" data-aos="fade-up" data-aos-delay="200">
+                        <div class="counter-header">
+                            <div class="counter-icon-frame experience">
+                                <div class="counter-icon-glow"></div>
+                                <i class="bi bi-journal-richtext"></i>
+                            </div>
+                            <div class="counter-badge experience">EXPERIENCE</div>
+                        </div>
+                        <div class="counter-content">
+                            <div class="counter-num-game">
+                                <span class="counter purecounter" data-target="5">0</span>
+                                <span class="counter-plus">+</span>
+                            </div>
+                            <div class="counter-label-game">
+                                <span class="counter-text">YEARS</span>
+                                <span class="counter-subtext">Game Development</span>
+                            </div>
+                        </div>
+                        <div class="counter-progress-bar">
+                            <div class="counter-progress-fill experience" data-progress="75"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="counter-box-game" data-aos="fade-up" data-aos-delay="300">
+                        <div class="counter-header">
+                            <div class="counter-icon-frame clients">
+                                <div class="counter-icon-glow"></div>
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <div class="counter-badge clients">CLIENTS</div>
+                        </div>
+                        <div class="counter-content">
+                            <div class="counter-num-game">
+                                <span class="counter purecounter" data-target="16">0</span>
+                                <span class="counter-plus">+</span>
+                            </div>
+                            <div class="counter-label-game">
+                                <span class="counter-text">SATISFIED</span>
+                                <span class="counter-subtext">Happy Customers</span>
+                            </div>
+                        </div>
+                        <div class="counter-progress-bar">
+                            <div class="counter-progress-fill clients" data-progress="95"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="counter-box-game" data-aos="fade-up" data-aos-delay="400">
+                        <div class="counter-header">
+                            <div class="counter-icon-frame awards">
+                                <div class="counter-icon-glow"></div>
+                                <i class="bi bi-trophy-fill"></i>
+                            </div>
+                            <div class="counter-badge awards">AWARDS</div>
+                        </div>
+                        <div class="counter-content">
+                            <div class="counter-num-game">
+                                <span class="counter purecounter" data-target="5">0</span>
+                                <span class="counter-plus">+</span>
+                            </div>
+                            <div class="counter-label-game">
+                                <span class="counter-text">RECOGNITIONS</span>
+                                <span class="counter-subtext">Industry Awards</span>
+                            </div>
+                        </div>
+                        <div class="counter-progress-bar">
+                            <div class="counter-progress-fill awards" data-progress="60"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional stats panel -->
+                <div class="additional-stats-panel" data-aos="fade-up" data-aos-delay="500">
+                    <div class="stats-grid">
+                        <div class="stat-item-small">
+                            <div class="stat-icon-small">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <div class="stat-content-small">
+                                <span class="stat-number">50K+</span>
+                                <span class="stat-label">Lines of Code</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-item-small">
+                            <div class="stat-icon-small">
+                                <i class="bi bi-controller"></i>
+                            </div>
+                            <div class="stat-content-small">
+                                <span class="stat-number">40+</span>
+                                <span class="stat-label">Game Levels Designed</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-item-small">
+                            <div class="stat-icon-small">
+                                <i class="bi bi-palette-fill"></i>
+                            </div>
+                            <div class="stat-content-small">
+                                <span class="stat-number">25+</span>
+                                <span class="stat-label">Unique Mechanics</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-item-small">
+                            <div class="stat-icon-small">
+                                <i class="bi bi-lightbulb"></i>
+                            </div>
+                            <div class="stat-content-small">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Solutions Created</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects portfolio-mf-game sect-pt4 route">
+        <div class="container">
+            <!-- Game UI decorative elements -->
+            <div class="game-ui-corner top-left"></div>
+            <div class="game-ui-corner top-right"></div>
+            <div class="game-ui-corner bottom-left"></div>
+            <div class="game-ui-corner bottom-right"></div>
+            
+            <!-- Enhanced title section -->
+            <div class="section-header portfolio-title-section" data-aos="fade-up">
+                <div class="section-title-game">
+                    <div class="title-decoration left"></div>
+                    <h2 class="section-title">PROJECT ARCHIVES</h2>
+                    <div class="title-decoration right"></div>
+                </div>
+                <p class="section-subtitle portfolio-subtitle">Showcase of completed missions and achievements</p>
+            </div>
+            
+            <!-- Portfolio Filter System -->
+            <div class="portfolio-filter-system project-filters" data-aos="fade-up" data-aos-delay="100">
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="bi bi-grid-3x3-gap"></i>
+                        <span>ALL PROJECTS</span>
+                    </button>
+                    <button class="filter-btn" data-filter="unity">
+                        <i class="bi bi-cpu"></i>
+                        <span>UNITY 3D</span>
+                    </button>
+                    <button class="filter-btn" data-filter="procedural">
+                        <i class="bi bi-gear"></i>
+                        <span>PROCEDURAL</span>
+                    </button>
+                    <button class="filter-btn" data-filter="mobile">
+                        <i class="bi bi-phone"></i>
+                        <span>MOBILE</span>
+                    </button>
+                    <button class="filter-btn" data-filter="2d">
+                        <i class="bi bi-square"></i>
+                        <span>2D GAMES</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Enhanced Portfolio Grid -->
+            <div class="projects-grid portfolio-grid-game" id="projects-grid">
+                <!-- Projects will be dynamically loaded with enhanced styling -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills game-skills-section">
+        <div class="container">
+            <!-- Game UI decorative elements -->
+            <div class="game-ui-corner top-left"></div>
+            <div class="game-ui-corner top-right"></div>
+            <div class="game-ui-corner bottom-left"></div>
+            <div class="game-ui-corner bottom-right"></div>
+            
+            <div class="section-header">
+                <div class="section-title-game">
+                    <div class="title-decoration left"></div>
+                    <h2 class="section-title">TECH ARSENAL</h2>
+                    <div class="title-decoration right"></div>
+                </div>
+                <p class="section-subtitle">Advanced weapons and tools in my development arsenal</p>
+            </div>
+            
+            <div class="skills-container">
+                <!-- Game Development Skills -->
+                <div class="skill-category game-panel" data-aos="fade-up">
+                    <div class="panel-header">
+                        <div class="panel-icon">
+                            <i class="bi bi-gear-fill"></i>
+                        </div>
+                        <h3 class="panel-title">CORE DEVELOPMENT</h3>
+                        <div class="panel-controls">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="panel-content">
+                        <div class="skills-grid-game">
+                            <div class="skill-bar-container skill-item">
+                                <div class="skill-info">
+                                    <div class="skill-name">
+                                        <i class="bi bi-code-slash"></i>
+                                        C# Unity Development
+                                    </div>
+                                    <div class="skill-level">LVL 95</div>
+                                </div>
+                                <div class="skill-bar-bg skill-bar">
+                                    <div class="skill-bar-fill skill-progress" data-level="95" data-width="95%">
+                                        <div class="skill-bar-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-bar-container skill-item">
+                                <div class="skill-info">
+                                    <div class="skill-name">
+                                        <i class="bi bi-gear"></i>
+                                        Procedural Generation
+                                    </div>
+                                    <div class="skill-level">LVL 90</div>
+                                </div>
+                                <div class="skill-bar-bg skill-bar">
+                                    <div class="skill-bar-fill skill-progress" data-level="90" data-width="90%">
+                                        <div class="skill-bar-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-bar-container skill-item">
+                                <div class="skill-info">
+                                    <div class="skill-name">
+                                        <i class="bi bi-map"></i>
+                                        Level Design & World Building
+                                    </div>
+                                    <div class="skill-level">LVL 92</div>
+                                </div>
+                                <div class="skill-bar-bg skill-bar">
+                                    <div class="skill-bar-fill skill-progress" data-level="92" data-width="92%">
+                                        <div class="skill-bar-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-bar-container skill-item">
+                                <div class="skill-info">
+                                    <div class="skill-name">
+                                        <i class="bi bi-palette"></i>
+                                        UI/UX Design
+                                    </div>
+                                    <div class="skill-level">LVL 85</div>
+                                </div>
+                                <div class="skill-bar-bg skill-bar">
+                                    <div class="skill-bar-fill skill-progress" data-level="85" data-width="85%">
+                                        <div class="skill-bar-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Skills -->
+                <div class="skill-category game-panel" data-aos="fade-up" data-aos-delay="200">
+                    <div class="panel-header">
+                        <div class="panel-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h3 class="panel-title">SECONDARY SKILLS</h3>
+                        <div class="panel-controls">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="panel-content">
+                        <div class="skills-grid-game">
+                            <div class="skill-bar-container skill-item">
+                                <div class="skill-info">
+                                    <div class="skill-name">
+                                        <i class="bi bi-cpu-fill"></i>
+                                        Unreal Engine Development
+                                    </div>
+                                    <div class="skill-level">LVL 75</div>
+                                </div>
+                                <div class="skill-bar-bg skill-bar">
+                                    <div class="skill-bar-fill skill-progress" data-level="75" data-width="75%">
+                                        <div class="skill-bar-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-bar-container skill-item">
+                                <div class="skill-info">
+                                    <div class="skill-name">
+                                        <i class="bi bi-terminal"></i>
+                                        C++ Programming
+                                    </div>
+                                    <div class="skill-level">LVL 80</div>
+                                </div>
+                                <div class="skill-bar-bg skill-bar">
+                                    <div class="skill-bar-fill skill-progress" data-level="80" data-width="80%">
+                                        <div class="skill-bar-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-bar-container skill-item">
+                                <div class="skill-info">
+                                    <div class="skill-name">
+                                        <i class="bi bi-brush"></i>
+                                        Digital Art & Design
+                                    </div>
+                                    <div class="skill-level">LVL 78</div>
+                                </div>
+                                <div class="skill-bar-bg skill-bar">
+                                    <div class="skill-bar-fill skill-progress" data-level="78" data-width="78%">
+                                        <div class="skill-bar-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-bar-container skill-item">
+                                <div class="skill-info">
+                                    <div class="skill-name">
+                                        <i class="bi bi-globe"></i>
+                                        Web Development
+                                    </div>
+                                    <div class="skill-level">LVL 70</div>
+                                </div>
+                                <div class="skill-bar-bg skill-bar">
+                                    <div class="skill-bar-fill skill-progress" data-level="70" data-width="70%">
+                                        <div class="skill-bar-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact game-contact-section">
+        <div class="container">
+            <!-- Game UI decorative elements -->
+            <div class="game-ui-corner top-left"></div>
+            <div class="game-ui-corner top-right"></div>
+            <div class="game-ui-corner bottom-left"></div>
+            <div class="game-ui-corner bottom-right"></div>
+            
+            <div class="section-header">
+                <div class="section-title-game">
+                    <div class="title-decoration left"></div>
+                    <h2 class="section-title">CONTACT PROTOCOL</h2>
+                    <div class="title-decoration right"></div>
+                </div>
+                <p class="section-subtitle">Establish communication link for mission collaboration</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="game-panel">
+                        <div class="panel-header">
+                            <div class="panel-icon">
+                                <i class="bi bi-broadcast"></i>
+                            </div>
+                            <h3 class="panel-title">COMM CHANNELS</h3>
+                            <div class="panel-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Primary Email</h4>
+                                    <p>tasif.grandfleet@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="bi bi-telephone"></i>
+                                <div>
+                                    <h4>Direct Comm</h4>
+                                    <p>+880 1978648494</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <h4>LinkedIn Network</h4>
+                                    <p>linkedin.com/in/tasif-emon</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <h4>Code Repository</h4>
+                                    <p>github.com/tasif-emon</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <div>
+                                    <h4>Base Location</h4>
+                                    <p>Bangladesh</p>
+                                </div>
+                            </div>
+                            <div class="contact-item status-item">
+                                <i class="bi bi-circle-fill online-indicator"></i>
+                                <div>
+                                    <h4>Current Status</h4>
+                                    <p class="status-text">Online - Available for New Missions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div class="game-panel">
+                        <div class="panel-header">
+                            <div class="panel-icon">
+                                <i class="bi bi-chat-dots"></i>
+                            </div>
+                            <h3 class="panel-title">SEND MESSAGE</h3>
+                            <div class="panel-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="panel-content">
+                            <form class="contact-form" id="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Agent Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Comm Channel</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Mission Type</label>
+                                    <input type="text" id="subject" name="subject" placeholder="Project subject">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Mission Brief</label>
+                                    <textarea id="message" name="message" placeholder="Describe your project requirements..." rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn game-button btn-primary">
+                                    <span class="button-text">TRANSMIT MESSAGE</span>
+                                    <span class="button-icon">→</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer game-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/img/THE2.ico" alt="THE Logo">
+                    <span>THE - Game Designer</span>
+                </div>
+                <p>&copy; 2025 Tasif Hossain Emon. All rights reserved. Built with passion for gaming excellence.</p>
+                <div class="social-links">
+                    <a href="mailto:tasif.grandfleet@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                        <span class="tooltip">Email</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="tooltip">LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                        <span class="tooltip">GitHub</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-itch-io"></i>
+                        <span class="tooltip">Itch.io</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-unity"></i>
+                        <span class="tooltip">Unity Connect</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-decoration"></div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourusername.github.io/sitemap.xml
+
+# Disallow certain files
+Disallow: /assets/js/
+Disallow: /.github/
+Disallow: /README.md

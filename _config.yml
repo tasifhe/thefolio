@@ -1,0 +1,38 @@
+# GitHub Pages Configuration
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Site settings
+title: "Game Developer Portfolio"
+description: "Professional Game Developer and Designer Portfolio"
+url: "https://yourusername.github.io"
+baseurl: ""
+
+# Author information
+author:
+  name: "Your Name"
+  email: "your.email@example.com"
+  github: "yourusername"
+  linkedin: "yourprofile"
+
+# Build settings
+include:
+  - _pages
+
+# Exclude from processing
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/

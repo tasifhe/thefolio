@@ -1,0 +1,125 @@
+/* ===== LOADING SCREEN COMPONENT ===== */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 50%, var(--bg-quaternary) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-modal);
+    transition: opacity var(--transition-slow);
+}
+
+.loading-content {
+    text-align: center;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 2;
+}
+
+.loading-logo {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.loading-logo img {
+    width: 80px;
+    height: 80px;
+    animation: logoSpin 3s linear infinite;
+}
+
+.loading-glow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+    opacity: 0.3;
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes logoSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.6; }
+}
+
+.pixel-loader {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary-glow), var(--secondary-glow));
+    margin: 0 auto 20px;
+    animation: pixelPulse 1.5s infinite;
+    border: 2px solid var(--primary-glow);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+@keyframes pixelPulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.1) rotate(90deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+    75% { transform: scale(1.1) rotate(270deg); }
+}
+
+.loading-text {
+    font-family: var(--game-font);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: var(--primary-glow);
+}
+
+.loading-progress {
+    width: 300px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 1px solid var(--glass-border);
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-glow), var(--secondary-glow));
+    width: 0%;
+    animation: loadingProgress 3s ease-out forwards;
+    box-shadow: 0 0 10px var(--primary-glow);
+}
+
+@keyframes loadingProgress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.progress-text {
+    margin-top: 10px;
+    font-family: var(--game-font);
+    font-weight: 600;
+    color: var(--primary-glow);
+}
+
+.matrix-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text y="50" font-size="20" fill="%2364ffda" opacity="0.1">01</text></svg>') repeat;
+    animation: matrixScroll 20s linear infinite;
+    opacity: 0.1;
+}
+
+@keyframes matrixScroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
+}

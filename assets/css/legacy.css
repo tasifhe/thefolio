@@ -1,0 +1,12 @@
+/* ===== LEGACY SUPPORT & OVERRIDES ===== */
+/* This file contains any remaining styles not moved to modular files */
+/* It will be gradually phased out as the modular system is completed */
+
+/* Any additional custom styles that don't fit into the modular structure can go here */
+/* This file should remain minimal and only contain truly global overrides */
+
+/* Example of styles that might remain here:
+   - Third-party plugin overrides
+   - Legacy browser compatibility fixes
+   - Temporary patches during migration
+*/

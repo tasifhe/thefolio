@@ -1,0 +1,64 @@
+/* ===== STATS SECTION ===== */
+.stats {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 6rem 0;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    text-align: center;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #64ffda, transparent);
+    transition: left 0.5s ease;
+}
+
+.stat-box:hover::before {
+    left: 100%;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(100, 255, 218, 0.1);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: #64ffda;
+    margin-bottom: 1rem;
+}
+
+.stat-counter {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-family: 'Orbitron', monospace;
+}
+
+.stat-title {
+    color: #ccc;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            color: #64ffda;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .error-container {
+            max-width: 600px;
+            padding: 2rem;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+        }
+        
+        .error-message {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #ccc;
+        }
+        
+        .back-home {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #64ffda, #4ecdc4);
+            color: #0a0a0a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .back-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+        }
+        
+        .floating-element {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.3;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <div class="error-message">Oops! This page seems to have glitched out of existence.</div>
+        <a href="/" class="back-home">Return to Portfolio</a>
+    </div>
+    
+    <div class="floating-element" style="top: 10%; left: 10%;">🎮</div>
+    <div class="floating-element" style="top: 20%; right: 10%; animation-delay: 2s;">⚡</div>
+    <div class="floating-element" style="bottom: 10%; left: 20%; animation-delay: 4s;">🚀</div>
+    <div class="floating-element" style="bottom: 20%; right: 20%; animation-delay: 1s;">🎯</div>
+    
+    <script>
+        // Add some interactivity
+        document.addEventListener('mousemove', (e) => {
+            const elements = document.querySelectorAll('.floating-element');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                
+                el.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

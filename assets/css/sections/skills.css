@@ -1,0 +1,128 @@
+/* ===== SKILLS SECTION ===== */
+.skills {
+    background: #0a0e27;
+}
+
+.skills-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.skills-text {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.skills-text h3 {
+    color: #64ffda;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skills-text p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.skill-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.skill-category h4 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-category i {
+    color: #64ffda;
+    font-size: 1.3rem;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(100, 255, 218, 0
+
+);
+    border-color: rgba(100, 255, 218, 0.3);
+}
+
+.skill-name {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.skill-level {
+    color: #64ffda;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skill-progress {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #64ffda, #00d4aa);
+    border-radius: 3px;
+    transition: width 1s ease-in-out;
+}
+
+/* Skill level indicators */
+.skill-item[data-level="expert"] .skill-progress-bar {
+    width: 95%;
+}
+
+.skill-item[data-level="advanced"] .skill-progress-bar {
+    width: 85%;
+}
+
+.skill-item[data-level="intermediate"] .skill-progress-bar {
+    width: 70%;
+}
+
+.skill-item[data-level="beginner"] .skill-progress-bar {
+    width: 50%;
+}
