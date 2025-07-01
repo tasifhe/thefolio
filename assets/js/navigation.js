@@ -193,7 +193,4 @@
         init();
     }
     
-    // Also try after a short delay as fallback
-    setTimeout(init, 500);
-    
 })();
