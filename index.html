@@ -82,7 +82,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar game-header" id="navbar">
+    <nav class="navbar game-header" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-frame left"></div>
         <div class="nav-frame right"></div>
         <div class="nav-container">
@@ -96,42 +96,42 @@
                     <span class="logo-tagline">GAME DESIGNER</span>
                 </div>
             </div>
-            <ul class="nav-menu game-navbar" id="nav-menu">
-                <li><a href="#home" class="nav-link active">
-                    <span class="nav-icon"><i class="bi bi-house"></i></span>
+            <ul class="nav-menu game-navbar" id="nav-menu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link active" role="menuitem" aria-current="page">
+                    <span class="nav-icon"><i class="bi bi-house" aria-hidden="true"></i></span>
                     <span class="nav-text">HOME</span>
                     <span class="nav-hover-effect"></span>
                 </a></li>
-                <li><a href="#about" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-person"></i></span>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">
+                    <span class="nav-icon"><i class="bi bi-person" aria-hidden="true"></i></span>
                     <span class="nav-text">ABOUT</span>
                     <span class="nav-hover-effect"></span>
                 </a></li>
-                <li><a href="#services" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-gear"></i></span>
+                <li role="none"><a href="#services" class="nav-link" role="menuitem">
+                    <span class="nav-icon"><i class="bi bi-gear" aria-hidden="true"></i></span>
                     <span class="nav-text">SERVICES</span>
                     <span class="nav-hover-effect"></span>
                 </a></li>
-                <li><a href="#projects" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-briefcase"></i></span>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">
+                    <span class="nav-icon"><i class="bi bi-briefcase" aria-hidden="true"></i></span>
                     <span class="nav-text">PROJECTS</span>
                     <span class="nav-hover-effect"></span>
                 </a></li>
-                <li><a href="#skills" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-lightning-charge"></i></span>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem">
+                    <span class="nav-icon"><i class="bi bi-lightning-charge" aria-hidden="true"></i></span>
                     <span class="nav-text">SKILLS</span>
                     <span class="nav-hover-effect"></span>
                 </a></li>
-                <li><a href="#contact" class="nav-link">
-                    <span class="nav-icon"><i class="bi bi-envelope"></i></span>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">
+                    <span class="nav-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
                     <span class="nav-text">CONTACT</span>
                     <span class="nav-hover-effect"></span>
                 </a></li>
             </ul>
-            <div class="nav-toggle game-mobile-toggle" id="nav-toggle">
-                <i class="bi bi-list mobile-nav-toggle"></i>
+            <button class="nav-toggle game-mobile-toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
+                <i class="bi bi-list mobile-nav-toggle" aria-hidden="true"></i>
                 <div class="toggle-glow"></div>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -163,7 +163,7 @@
                     
                     <div class="hero-text">
                         <h1 class="hero-title game-title">
-                            <span class="glitch-effect typewriter" data-text="Hi! I'm Tasif Hossain Emon">Hi! I'm Tasif Hossain Emon</span>
+                            <span class="glitch-effect typewriter" data-text="Hi! I'm Tasif Hossain">Hi! I'm Tasif Hossain</span>
                         </h1>
                         <p class="hero-subtitle">
                             <span class="class-title">CLASS:</span>
@@ -173,7 +173,7 @@
                         
                         <!-- Game-styled CTA buttons -->
                         <div class="hero-buttons cta-container">
-                            <a href="#projects" class="btn game-button btn-primary">
+                            <a href="#projects" class="btn game-button btn-primary" onclick="scrollToSection('projects'); return false;">
                                 <span class="button-text">VIEW PROJECTS</span>
                                 <span class="button-icon">→</span>
                             </a>
@@ -235,9 +235,7 @@
                     <!-- Profile Picture with HUD frame -->
                     <div class="profile-frame" data-aos="fade-right">
                         <div class="hexagon-border"></div>
-                        <img src="assets/img/Potfolio_Pic_V2.jpg" alt="Tasif Hossain Emon" class="profile-image">
-                        <div class="profile-scanner"></div>
-                        
+                        <img data-src="assets/img/Potfolio_Pic_V2.jpg" alt="Tasif Hossain Emon" class="profile-image lazy">
                     </div>
 
                     <!-- Character Stats Panel -->
@@ -1079,6 +1077,11 @@
         </div>
     </div>
 
-    <script src="assets/js/main.js"></script>
+    <!-- JavaScript Modules -->
+    <script src="assets/js/loading.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/lazy-loading.js"></script>
+    <script src="assets/js/main-simplified.js"></script>
 </body>
 </html>
