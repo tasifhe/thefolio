@@ -13,7 +13,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #fff;
-    background: linear-gradient(135deg, #0a0a0a 0%, #111 25%, #0f0f0f 50%, #0a0a0a 75%, #111 100%);
+    background: linear-gradient(135deg, #0f0708 0%, #1a0d0f 25%, #2d1b1f 50%, #1a0d0f 75%, #0f0708 100%);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     overflow-x: hidden;
@@ -25,25 +25,31 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Gaming UI Variables */
+/* Gaming UI Variables - Red Gaming Theme */
 :root {
-    --primary-glow: #64ffda;
-    --secondary-glow: #4ecdc4;
-    --danger-glow: #ff6b6b;
-    --warning-glow: #ffa726;
-    --success-glow: #66bb6a;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(100, 255, 218, 0.2);
+    --primary-glow: #ff4757;
+    --secondary-glow: #ff6b7d;
+    --accent-glow: #ff3838;
+    --danger-glow: #ff4757;
+    --warning-glow: #ffa502;
+    --success-glow: #2ed573;
+    --glass-bg: rgba(255, 71, 87, 0.05);
+    --glass-border: rgba(255, 71, 87, 0.2);
     --game-font: 'Rajdhani', sans-serif;
     
-    /* Additional Gaming Variables */
-    --bg-primary: #0a0a0a;
-    --bg-secondary: #111;
-    --bg-tertiary: #1a1a2e;
-    --bg-quaternary: #16213e;
+    /* Background Colors - Dark Red Gaming Theme */
+    --bg-primary: #0f0708;
+    --bg-secondary: #1a0d0f;
+    --bg-tertiary: #2d1b1f;
+    --bg-quaternary: #3d2b2f;
     --text-primary: #fff;
-    --text-secondary: #ccc;
-    --text-muted: #666;
+    --text-secondary: #e0e0e0;
+    --text-muted: #888;
+    
+    /* Red Gaming Gradients */
+    --gradient-primary: linear-gradient(135deg, #ff4757 0%, #ff6b7d 100%);
+    --gradient-secondary: linear-gradient(135deg, #ff3838 0%, #ff4757 100%);
+    --gradient-dark: linear-gradient(135deg, #0f0708 0%, #2d1b1f 100%);
     
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -152,39 +158,47 @@ a:hover {
     box-shadow: var(--shadow-md);
 }
 
-/* Section base styles */
+/* ===== SECTION HEADERS ===== */
 section {
-    padding: var(--spacing-xxl) 0;
-    position: relative;
+    padding: 6rem 0;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: var(--spacing-xxl);
+    margin-bottom: 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 1.5rem;
     position: relative;
+    font-family: var(--game-font);
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 100px;
     height: 3px;
-    background: linear-gradient(135deg, var(--primary-glow), var(--secondary-glow));
+    background: var(--gradient-primary);
+    border-radius: 2px;
 }
 
 .section-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.6;
 }

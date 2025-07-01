@@ -1,6 +1,7 @@
 /* ===== CONTACT SECTION ===== */
 .contact {
-    background: #111;
+    background: var(--bg-secondary);
+    padding: 6rem 0;
 }
 
 .contact-content {
@@ -8,26 +9,34 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .contact-info {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
+    background: var(--glass-bg);
+    padding: 3rem;
     border-radius: 20px;
-    border: 1px solid rgba(100, 255, 218, 0.1);
-    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
 }
 
 .contact-info h3 {
-    color: #64ffda;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    color: var(--primary-glow);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--game-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .contact-info p {
-    color: #ccc;
+    color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 .contact-details {
@@ -39,28 +48,36 @@
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    color: #ccc;
-    transition: color 0.3s ease;
+    gap: 1.5rem;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    background: var(--glass-bg);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    margin-bottom: 1rem;
 }
 
 .contact-item:hover {
-    color: #64ffda;
+    color: var(--primary-glow);
+    border-color: var(--primary-glow);
+    transform: translateX(5px);
 }
 
 .contact-item i {
-    color: #64ffda;
-    font-size: 1.2rem;
-    width: 20px;
+    color: var(--primary-glow);
+    font-size: 1.5rem;
+    width: 30px;
     text-align: center;
+    text-shadow: 0 0 10px var(--primary-glow);
 }
 
 .contact-form {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
+    background: var(--glass-bg);
+    padding: 3rem;
     border-radius: 20px;
-    border: 1px solid rgba(100, 255, 218, 0.1);
-    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
 }
 
 .form-group {
@@ -69,19 +86,22 @@
 
 .form-group label {
     display: block;
-    color: #fff;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    font-family: var(--game-font);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(100, 255, 218, 0.3);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     border-radius: 10px;
-    padding: 1rem;
-    color: #fff;
+    padding: 1.2rem;
+    color: var(--text-primary);
     font-size: 1rem;
     transition: all 0.3s ease;
     font-family: inherit;
@@ -90,9 +110,9 @@
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #64ffda;
-    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
-    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-glow);
+    box-shadow: 0 0 20px rgba(255, 71, 87, 0.3);
+    background: rgba(255, 71, 87, 0.05);
 }
 
 .form-group textarea {
@@ -102,25 +122,43 @@
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #999;
+    color: var(--text-muted);
 }
 
 .submit-btn {
-    background: linear-gradient(135deg, #64ffda, #00d4aa);
-    color: #000;
+    background: var(--gradient-primary);
+    color: var(--bg-primary);
     border: none;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     border-radius: 10px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-family: var(--game-font);
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
 }
 
 .submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(100, 255, 218, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 71, 87, 0.4);
 }

@@ -7,7 +7,7 @@
     <meta name="description" content="Professional Unity Game Developer & Designer with 5+ years experience. Specializing in procedural generation, level design, and immersive gaming experiences.">
     <meta name="keywords" content="Game Developer, Unity Developer, Game Designer, Procedural Generation, Level Design, Bangladesh Game Developer">
     <meta name="author" content="Tasif Hossain Emon">
-    <link rel="icon" type="image/x-icon" href="assets/img/THE2.ico">
+    <link rel="icon" type="image/x-icon" href="assets/img/THE_IC.png">
     <!-- External Fonts and Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -44,16 +44,40 @@
     <div id="loading-screen">
         <div class="loading-content">
             <div class="loading-logo">
-                <img src="assets/img/THE2.ico" alt="THE Logo">
+                <img src="assets/img/THE_IC.png" alt="THE Logo">
                 <div class="loading-glow"></div>
             </div>
             <div class="pixel-loader"></div>
             <p class="loading-text">Initializing Game World...</p>
+            
+            <!-- Loading Step Indicator -->
+            <div class="loading-step-indicator">
+                <div class="step-dot active"></div>
+                <div class="step-dot"></div>
+                <div class="step-dot"></div>
+                <div class="step-dot"></div>
+                <div class="step-dot"></div>
+                <div class="step-dot"></div>
+            </div>
+            
             <div class="loading-progress">
                 <div class="progress-bar"></div>
             </div>
             <div class="progress-text">Initializing systems...</div>
+            <div class="loading-percentage">0%</div>
         </div>
+        
+        <!-- System Status Display -->
+        <div class="system-status">
+            <div class="status-line">>>> SYSTEM ONLINE</div>
+            <div class="status-line">>>> GRAPHICS: OK</div>
+            <div class="status-line">>>> AUDIO: OK</div>
+            <div class="status-line">>>> READY</div>
+        </div>
+        
+        <!-- Skip Button -->
+        <button class="skip-loading" id="skip-loading">Skip Intro</button>
+        
         <div class="matrix-bg"></div>
     </div>
 
@@ -65,7 +89,7 @@
             <div class="nav-logo game-logo">
                 <div class="logo-emblem">
                     <div class="logo-glow"></div>
-                    <img src="assets/img/THE2.ico" alt="THE Logo">
+                    <img src="assets/img/THE_IC.png" alt="THE Logo">
                 </div>
                 <div class="logo-text-container">
                     <span class="logo-text glitch-hover" data-text="THE">THE</span>
@@ -165,7 +189,7 @@
                             <div class="profile-frame hexagon-border">
                                 <img src="assets/img/Potfolio_Pic_V2.jpg" alt="Tasif Hossain Emon">
                                 <div class="profile-scanner"></div>
-                                <div class="character-level">LVL 5</div>
+                                
                             </div>
                             <div class="floating-elements">
                                 <div class="floating-element" data-speed="0.5">🎮</div>
@@ -213,7 +237,7 @@
                         <div class="hexagon-border"></div>
                         <img src="assets/img/Potfolio_Pic_V2.jpg" alt="Tasif Hossain Emon" class="profile-image">
                         <div class="profile-scanner"></div>
-                        <div class="character-level">LVL 5</div>
+                        
                     </div>
 
                     <!-- Character Stats Panel -->
@@ -1014,7 +1038,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="assets/img/THE2.ico" alt="THE Logo">
+                    <img src="assets/img/THE_IC.png" alt="THE Logo">
                     <span>THE - Game Designer</span>
                 </div>
                 <p>&copy; 2025 Tasif Hossain Emon. All rights reserved. Built with passion for gaming excellence.</p>

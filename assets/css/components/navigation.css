@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 10, 0.95);
+    background: rgba(15, 7, 8, 0.95);
     backdrop-filter: blur(15px);
     z-index: var(--z-header);
     transition: all var(--transition-normal);
@@ -11,8 +11,8 @@
 }
 
 .navbar.scrolled {
-    background: rgba(10, 10, 10, 0.98);
-    box-shadow: var(--shadow-sm);
+    background: rgba(15, 7, 8, 0.98);
+    box-shadow: 0 5px 30px rgba(255, 71, 87, 0.2);
 }
 
 .nav-frame {

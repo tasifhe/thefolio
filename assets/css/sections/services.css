@@ -1,22 +1,26 @@
 /* ===== SERVICES SECTION ===== */
 .services {
-    background: #0a0e27;
+    background: var(--bg-primary);
+    padding: 6rem 0;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .service-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
+    background: var(--glass-bg);
+    padding: 3rem;
     border-radius: 20px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(100, 255, 218, 0.1);
-    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
     position: relative;
     overflow: hidden;
 }
@@ -30,9 +34,9 @@
     bottom: -2px;
     background: linear-gradient(45deg, 
         transparent, 
-        rgba(100, 255, 218, 0.3), 
+        rgba(255, 71, 87, 0.3), 
         transparent, 
-        rgba(255, 100, 255, 0.3),
+        rgba(255, 107, 125, 0.3),
         transparent
     );
     z-index: -1;
@@ -47,43 +51,54 @@
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.1);
+    box-shadow: 0 20px 40px rgba(255, 71, 87, 0.2);
 }
 
 .service-icon {
-    font-size: 3rem;
-    color: #64ffda;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    color: var(--primary-glow);
+    margin-bottom: 1.5rem;
     display: block;
+    text-shadow: 0 0 20px var(--primary-glow);
 }
 
 .service-card h3 {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--game-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .service-card p {
-    color: #ccc;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 .service-features {
     list-style: none;
     text-align: left;
+    margin-top: 1rem;
 }
 
 .service-features li {
-    color: #ccc;
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    padding-left: 2rem;
     position: relative;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .service-features li::before {
     content: '▶';
-    color: #64ffda;
+    color: var(--primary-glow);
     position: absolute;
     left: 0;
+    font-size: 0.9rem;
+    text-shadow: 0 0 10px var(--primary-glow);
 }

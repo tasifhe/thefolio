@@ -1,9 +1,10 @@
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== RESPONSIVE DESIGN - RED GAMING THEME ===== */
 
 /* Large Desktop - 1200px and up */
 @media (min-width: 1200px) {
     .container {
-        max-width: 1140px;
+        max-width: 1200px;
+        padding: 0 2rem;
     }
     
     .section-title {
@@ -13,16 +14,30 @@
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Desktop - 992px to 1199px */
 @media (max-width: 1199px) {
     .container {
         max-width: 960px;
+        padding: 0 2rem;
     }
     
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr 300px;
+        gap: 3rem;
     }
 }
 
@@ -30,7 +45,11 @@
 @media (max-width: 991px) {
     .container {
         max-width: 720px;
-        padding: 0 2rem;
+        padding: 0 1.5rem;
+    }
+    
+    section {
+        padding: 4rem 0;
     }
     
     .navbar .nav-links {
@@ -47,23 +66,23 @@
         gap: 2rem;
     }
     
-    .hero-text h1 {
-        font-size: 2.5rem;
+    .hero-title.game-title {
+        font-size: 3rem;
     }
     
     .about-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
     }
     
     .skills-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
     }
     
     .contact-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
     }
     
     .footer-content {
@@ -71,8 +90,17 @@
         gap: 2rem;
     }
     
-    .stats-container {
+    .stats-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
 

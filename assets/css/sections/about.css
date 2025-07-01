@@ -1,6 +1,7 @@
 /* ===== ABOUT SECTION ===== */
 .about {
-    background: #111;
+    background: var(--bg-secondary);
+    padding: 6rem 0;
 }
 
 .about-content {
@@ -8,26 +9,52 @@
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .about-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
+    background: var(--glass-bg);
+    padding: 3rem;
     border-radius: 20px;
-    border: 1px solid rgba(100, 255, 218, 0.1);
-    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--primary-glow), transparent);
+    opacity: 0.1;
+    transition: left 0.8s ease;
+}
+
+.about-card:hover::before {
+    left: 100%;
 }
 
 .about-card h3 {
-    color: #64ffda;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    color: var(--primary-glow);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--game-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .about-card p {
-    color: #ccc;
+    color: var(--text-secondary);
     margin-bottom: 2rem;
     line-height: 1.8;
+    font-size: 1.1rem;
 }
 
 .stats-grid {
@@ -35,26 +62,43 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     text-align: center;
+    margin-top: 2rem;
 }
 
 .stat-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: var(--glass-bg);
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 71, 87, 0.2);
+    border-color: var(--primary-glow);
 }
 
 .stat-number {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    color: #64ffda;
+    color: var(--primary-glow);
     margin-bottom: 0.5rem;
+    font-family: var(--game-font);
+    text-shadow: 0 0 15px var(--primary-glow);
 }
 
 .stat-label {
-    color: #ccc;
-    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-family: var(--game-font);
+    font-weight: 600;
 }
 
 .about-skills {
@@ -64,22 +108,36 @@
 }
 
 .skills-category h4 {
-    color: #fff;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-family: var(--game-font);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.8rem;
 }
 
 .skill-tag {
-    background: rgba(100, 255, 218, 0.1);
-    color: #64ffda;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    background: rgba(255, 71, 87, 0.1);
+    color: var(--primary-glow);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
     font-size: 0.9rem;
-    border: 1px solid rgba(100, 255, 218, 0.2);
+    border: 1px solid var(--glass-border);
+    font-family: var(--game-font);
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(255, 71, 87, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
 }
