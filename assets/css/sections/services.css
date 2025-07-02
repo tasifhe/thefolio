@@ -102,3 +102,115 @@
     font-size: 0.9rem;
     text-shadow: 0 0 10px var(--primary-glow);
 }
+
+/* ===== SERVICE BOX STYLES ===== */
+.service-box {
+    background: var(--glass-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        transparent, 
+        rgba(255, 71, 87, 0.3), 
+        transparent, 
+        rgba(255, 107, 125, 0.3),
+        transparent
+    );
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+}
+
+.service-box:hover::before {
+    opacity: 1;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 71, 87, 0.2);
+}
+
+.service-ico {
+    margin-bottom: 2rem;
+}
+
+.ico-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: var(--glass-bg);
+    border: 2px solid var(--primary-glow);
+    border-radius: 50%;
+    color: var(--primary-glow);
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ico-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-glow);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+}
+
+.service-box:hover .ico-circle::before {
+    opacity: 0.1;
+}
+
+.service-box:hover .ico-circle {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 71, 87, 0.5);
+}
+
+.service-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.s-title {
+    font-size: 1.5rem;
+    color: var(--primary-glow);
+    margin-bottom: 1.5rem;
+    font-family: var(--game-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.s-description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1rem;
+    text-align: left;
+}

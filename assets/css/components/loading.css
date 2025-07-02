@@ -393,38 +393,23 @@
 .system-status .status-line {
     margin-bottom: 4px;
     opacity: 0;
-    animation: statusAppear 0.5s ease forwards;
+    animation: statusFadeIn 0.3s ease forwards;
     white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #2ed573;
 }
 
-.system-status .status-line:nth-child(1) { animation-delay: 0.5s; }
-.system-status .status-line:nth-child(2) { animation-delay: 1s; }
-.system-status .status-line:nth-child(3) { animation-delay: 1.5s; }
-.system-status .status-line:nth-child(4) { animation-delay: 2s; }
+.system-status .status-line:nth-child(1) { animation-delay: 0.2s; }
+.system-status .status-line:nth-child(2) { animation-delay: 0.4s; }
+.system-status .status-line:nth-child(3) { animation-delay: 0.6s; }
+.system-status .status-line:nth-child(4) { animation-delay: 0.8s; }
 
-@keyframes statusAppear {
+@keyframes statusFadeIn {
     from { 
         opacity: 0; 
         transform: translateX(20px);
-        width: 0;
     }
     to { 
         opacity: 1; 
         transform: translateX(0);
-        width: 100%;
-    }
-}
-
-@keyframes typewriter {
-    from { 
-        width: 0;
-        border-right-color: #2ed573;
-    }
-    to { 
-        width: 100%;
-        border-right-color: transparent;
     }
 }
 

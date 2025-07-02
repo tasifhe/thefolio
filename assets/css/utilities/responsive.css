@@ -330,3 +330,134 @@
         color: #000 !important;
     }
 }
+
+/* ===== RESPONSIVE FIXES ===== */
+@media (max-width: 1200px) {
+    .about-grid-game {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .character-card {
+        position: static;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid,
+    .portfolio-grid-game {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .counter-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .skills-container {
+        padding: 0 1rem;
+    }
+    
+    .skill-category {
+        margin-bottom: 2rem;
+    }
+    
+    .filter-controls {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .title-decoration {
+        width: 50px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .game-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .service-box,
+    .game-project-card,
+    .counter-box-game {
+        padding: 1.5rem;
+    }
+}
+
+/* ===== ENSURE SECTIONS DISPLAY ===== */
+section {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== LOADING AND TRANSITION STATES ===== */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* ===== ENSURE VISIBILITY ===== */
+.about, .services-mf, .projects, .skills, .contact, .footer {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}

@@ -151,13 +151,20 @@
 
 .about-grid-game {
     display: grid;
-    grid-template-columns: 380px 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
     min-height: auto;
+}
+
+@media (max-width: 1024px) {
+    .about-grid-game {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 }
 
 /* Character Card - Left Column */
