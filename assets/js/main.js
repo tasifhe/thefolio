@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 4000); // 4 seconds to complete the loading sequence
 
     // Initialize all components
-    initNavigation();
+    // initNavigation(); // DISABLED - Using navigation-fix.js instead
     initGlobalLinkHandler();
     initHero();
     
@@ -287,14 +287,13 @@ function initLoadingScreen() {
     }, 100);
 }
 
-// ===== NAVIGATION =====
+// ===== NAVIGATION - DISABLED =====
+// Navigation logic moved to navigation-fix.js to prevent conflicts
 function initNavigation() {
-    console.log('Initializing navigation...');
+    console.log('Navigation initialization disabled - using navigation-fix.js instead');
+    return; // Early return to prevent execution
     
-    const navbar = document.getElementById('navbar');
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    // Original code commented out to prevent conflicts
 
     if (!navbar || !navToggle || !navMenu) {
         console.error('Navigation elements not found');
@@ -848,58 +847,22 @@ function initScrollAnimations() {
 }
 
 // ===== MANUAL SCROLL FUNCTION =====
+// DISABLED - Function moved to navigation-fix.js
 function scrollToSection(sectionId) {
-    console.log(`Manual scroll to: ${sectionId}`);
+    console.log(`scrollToSection disabled - using NavigationAPI.scrollTo instead`);
     
-    const section = document.getElementById(sectionId);
-    if (!section) {
-        console.error(`Section not found: ${sectionId}`);
-        return;
+    // Redirect to the new navigation API if available
+    if (window.NavigationAPI && window.NavigationAPI.scrollTo) {
+        return window.NavigationAPI.scrollTo(sectionId);
     }
     
-    const navbar = document.getElementById('navbar');
-    const navbarHeight = navbar ? navbar.offsetHeight : 80;
-    const targetPosition = section.offsetTop - navbarHeight - 20;
-    
-    console.log(`Section found. Scrolling to position: ${targetPosition}`);
-    
-    // Try multiple scroll methods
-    try {
-        // Method 1: window.scrollTo with smooth behavior
-        window.scrollTo({
-            top: Math.max(0, targetPosition),
-            behavior: 'smooth'
-        });
-        
-        setTimeout(() => {
-            // Method 2: scrollIntoView as fallback
-            if (Math.abs(window.scrollY - targetPosition) > 50) {
-                section.scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'start' 
-                });
-            }
-        }, 100);
-        
-    } catch (error) {
-        console.error('Scroll error:', error);
-        // Method 3: Basic scroll without smooth behavior
-        window.scrollTo(0, Math.max(0, targetPosition));
-    }
-    
-    // Update active nav link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-        }
-    });
+    console.warn('NavigationAPI not available, scroll ignored');
+    return;
 }
 
-// Make function globally available
+// Make function globally available for backward compatibility
 // window.scrollToSection = scrollToSection;
-// NOTE: Global scrollToSection is now handled by navigation.js for consistency.
+// NOTE: Global scrollToSection is now handled by navigation-fix.js for consistency.
 
 // ===== UTILITY FUNCTIONS =====
 function debounce(func, wait) {
@@ -1228,7 +1191,7 @@ function init() {
     
     initPerformanceOptimizations();
     initLoadingScreen();
-    initNavigation();
+    // initNavigation(); // DISABLED - Using navigation-fix.js instead
     initHero();
     initContact();
     initScrollAnimations();

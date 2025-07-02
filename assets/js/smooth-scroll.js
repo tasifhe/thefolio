@@ -14,8 +14,11 @@
             const href = link.getAttribute('href');
             if (!href || href === '#') return;
             
-            // Skip if this is handled by navigation module
-            if (link.classList.contains('nav-link')) return;
+            // Skip if this is a navigation link - let navigation.js handle it
+            if (link.classList.contains('nav-link')) {
+                console.log('Skipping nav-link, handled by navigation module');
+                return;
+            }
             
             console.log(`Smooth scroll - handling: ${href}`);
             

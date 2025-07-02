@@ -199,16 +199,38 @@
     background: linear-gradient(90deg, #ff4757, #ff6b7d, #ff4757);
     background-size: 200% 100%;
     width: 0%;
-    animation: 
-        loadingProgress 4s ease-out forwards,
-        progressShine 2s ease-in-out infinite;
-    box-shadow: 0 0 15px #ff4757;
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: progressShine 2s ease-in-out infinite;
+    box-shadow: 
+        0 0 15px #ff4757,
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
     border-radius: 4px;
+    position: relative;
+    overflow: hidden;
 }
 
-@keyframes loadingProgress {
-    0% { width: 0%; }
-    100% { width: 100%; }
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.2) 50%, 
+        transparent 100%);
+    animation: progressGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@keyframes progressGlow {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
 }
 
 @keyframes progressShine {
@@ -274,18 +296,77 @@
     height: 8px;
     border-radius: 50%;
     background: rgba(255, 71, 87, 0.3);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.step-dot::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
 }
 
 .step-dot.active {
     background: #ff4757;
-    box-shadow: 0 0 10px #ff4757;
-    transform: scale(1.2);
+    box-shadow: 
+        0 0 10px #ff4757,
+        0 0 20px rgba(255, 71, 87, 0.5);
+    transform: scale(1.3);
+    animation: stepPulse 1s ease-in-out infinite;
+}
+
+.step-dot.active::before {
+    transform: translateX(100%);
 }
 
 .step-dot.completed {
     background: #2ed573;
-    box-shadow: 0 0 10px #2ed573;
+    box-shadow: 
+        0 0 10px #2ed573,
+        0 0 15px rgba(46, 213, 115, 0.4);
+    transform: scale(1.1);
+}
+
+.step-dot.completed::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6px;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0;
+    animation: checkmarkAppear 0.3s ease 0.2s forwards;
+}
+
+@keyframes stepPulse {
+    0%, 100% { 
+        transform: scale(1.3);
+        box-shadow: 0 0 10px #ff4757, 0 0 20px rgba(255, 71, 87, 0.5);
+    }
+    50% { 
+        transform: scale(1.4);
+        box-shadow: 0 0 15px #ff4757, 0 0 30px rgba(255, 71, 87, 0.7);
+    }
+}
+
+@keyframes checkmarkAppear {
+    from { 
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to { 
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 /* Loading percentage display */
@@ -313,6 +394,9 @@
     margin-bottom: 4px;
     opacity: 0;
     animation: statusAppear 0.5s ease forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #2ed573;
 }
 
 .system-status .status-line:nth-child(1) { animation-delay: 0.5s; }
@@ -321,8 +405,27 @@
 .system-status .status-line:nth-child(4) { animation-delay: 2s; }
 
 @keyframes statusAppear {
-    from { opacity: 0; transform: translateX(20px); }
-    to { opacity: 1; transform: translateX(0); }
+    from { 
+        opacity: 0; 
+        transform: translateX(20px);
+        width: 0;
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0);
+        width: 100%;
+    }
+}
+
+@keyframes typewriter {
+    from { 
+        width: 0;
+        border-right-color: #2ed573;
+    }
+    to { 
+        width: 100%;
+        border-right-color: transparent;
+    }
 }
 
 /* Skip Button */
